@@ -32,7 +32,7 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    
     overflow: hidden;
 
     background-color: white;
@@ -41,8 +41,11 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
 
+    transform: translate(-50%, -50%);/* coloque essa transformação por ultimo qnd tiver uma animação*/
     transition: widt 0.3s, height  0.3s;
     transition-timing-function: ease;
+    
+
 }
 
 section#login > div#imagem {
@@ -69,15 +72,43 @@ div#formulario > p {
 
 form > div.compo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > i {
+    color: white;
+    background-color: black;
+    font-size: 2em;
+    width: 40px;
+    height: 5px;
+}
+
+div.campo > input {
+    background-color: #2d6462;
+    font: 1em;
+    width: calc(100% - 44px);
+    height: 100%;
+    
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px); /* coloque essa transformação por ultimo qnd tiver uma animação*/
+
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
+
 }
 
 form > input[ type=submit]{
